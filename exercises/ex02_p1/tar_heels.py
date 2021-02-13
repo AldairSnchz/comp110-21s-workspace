@@ -11,6 +11,7 @@ def main() -> None:
     choice: int = int(input("Enter an int: "))
     print(tar_heels(choice))
 
+
 def tar_heels(response: int) -> str:
     if (response % 14) == 0:
         return "TAR HEELS"
@@ -22,6 +23,7 @@ def tar_heels(response: int) -> str:
                 return "TAR"
             else:
                 return "CAROLINA"
+
 
 if __name__ == "__main__":
     main()

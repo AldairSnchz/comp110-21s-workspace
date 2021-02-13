@@ -11,6 +11,7 @@ def main() -> None:
     print(fortune_cookie())
     print("Now, go spread positive vibes!")
 
+
 def fortune_cookie() -> str: 
     x: int = 1
     y: int = 4
