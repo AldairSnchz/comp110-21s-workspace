@@ -3,9 +3,6 @@
 __author__ = "730447704"
 
 
-from random import choice
-
-
 def main() -> None:
     """The entrypoint of the program, when run as a module."""
     choice: int = int(input("Enter an int: "))
@@ -13,6 +10,7 @@ def main() -> None:
 
 
 def tar_heels(response: int) -> str:
+    """Dividing numbers."""
     if (response % 14) == 0:
         return "TAR HEELS"
     else:

@@ -13,6 +13,7 @@ def main() -> None:
 
 
 def fortune_cookie() -> str: 
+    """Fun with random numbers."""
     x: int = 1
     y: int = 4
     fortune: int = randint(x, y)
