@@ -2,7 +2,7 @@
 
 from datetime import datetime, timedelta
 
-__author__ = "YOUR 9-DIGIT PID"
+__author__ = "730447704"
 
 
 def main() -> None:
@@ -11,15 +11,29 @@ def main() -> None:
     doses: int = int(input("Doses administered: "))
     doses_per_day: int = int(input("Doses per day: "))
     target: int = int(input("Target percent vaccinated: "))
-    # TODO 2: Call days_to_target and store result in a variable.
-    # TODO 4: Call future_date and store result in a variable.
-    # TODO 5: Print the expected output using the variables above.
+    dtt: int = int(days_to_target(population, doses, doses_per_day, target))
+    fd: str = str(future_date(days_to_target(population, doses, doses_per_day, target)))
+    print("We will reach " + str(target) + "% vaccination in " + str(dtt) + " days which falls on " + fd)
 
 
-# TODO 1: Define days_to_target function
+def days_to_target(population: int, doses: int, doses_per_day: int, target: int) -> int:
+    """A function that shows number of days until target"""
+    perc: float = target / 100
+    pernv: int = int(population * perc)
+    peepv: float = doses / 2
+    peepnv: float = pernv - peepv
+    peepvpd: float = doses_per_day / 2
+    daytilv: int = round(peepnv / peepvpd)
+    return daytilv
 
 
-# TODO 3: Define future_date function
+def future_date(days_to_target: int) -> str:
+    """Day vaccination goal is met"""
+    hoy: datetime = datetime.today()
+    daytiltar: timedelta = timedelta(days_to_target)
+    date: datetime = hoy + daytiltar
+    daytarmet: str = date.strftime("%B %d, %Y")
+    return daytarmet
 
 
 if __name__ == "__main__":
