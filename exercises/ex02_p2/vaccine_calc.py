@@ -17,7 +17,7 @@ def main() -> None:
 
 
 def days_to_target(population: int, doses: int, doses_per_day: int, target: int) -> int:
-    """A function that shows number of days until target"""
+    """A function that shows number of days until target."""
     perc: float = target / 100
     pernv: int = int(population * perc)
     peepv: float = doses / 2
@@ -28,7 +28,7 @@ def days_to_target(population: int, doses: int, doses_per_day: int, target: int)
 
 
 def future_date(days_to_target: int) -> str:
-    """Day vaccination goal is met"""
+    """Day vaccination goal is met."""
     hoy: datetime = datetime.today()
     daytiltar: timedelta = timedelta(days_to_target)
     date: datetime = hoy + daytiltar
