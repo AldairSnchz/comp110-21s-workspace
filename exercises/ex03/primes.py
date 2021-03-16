@@ -16,7 +16,7 @@ def main() -> None:
 
 
 def is_prime(num: int) -> bool:
-    """Figures out if the number is prime or not"""
+    """Figures out if the number is prime or not."""
     i = 2
     while i < num:
         div: int = num % i
@@ -30,7 +30,7 @@ def is_prime(num: int) -> bool:
 
 
 def list_primes(first: int, last: int) -> list[int]:
-    """Lists the primes"""
+    """Lists the primes."""
     i = first
     list_nums: list[int] = []
     while i < last:

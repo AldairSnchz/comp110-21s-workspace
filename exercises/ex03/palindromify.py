@@ -4,7 +4,7 @@ __author__: str = "730447704"
 
 
 def palindromify(statement: str, one_two: bool) -> str:
-    """Creates the palindromify"""
+    """Creates the palindromify."""
     word: str = statement
     if one_two is True:
         i = len(statement)
